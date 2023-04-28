@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B-A</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&display=swap');
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    body{
+        
+        height: 100vh;
+    }
+    
+    .upper{
+        background-image: url(images/hero-desktop.jpg);
+        background-size: cover;
+        /* background-position-x: -200px;
+        background-position-y:-100px ; */
+        
+        width: 100%;
+        height: 60%;
+    }
+    .inner{
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .bottom{
+        width: 100%;
+        height: 40%;
+        background-color: rgb(253, 240, 242);
+        background-image: url(images/bg-pattern-desktop.svg);
+        background-size: cover;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    h1{
+        color: white;
+    }
+    h2{
+        color: hsl(0, 93%, 68%);
+    }
+</style>
+<body>
+    <div class="upper">
+        <div class="inner">
+        <h1>THANK YOU FOR SUBMITTING!</h1></div>
+    </div>
+    <div class="bottom">
+        <h2>We will keep you updated.</h2>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+  
+        const drop=document.querySelector(".inner");
+        const txt=document.querySelector("h2");
+        const t1=new TimelineMax();
+        t1.fromTo(
+            drop,
+            0.5,
+            {opacity: 0},
+            {opacity: 1, ease: Power2.easeInOut } 
+        )
+        .fromTo(
+            txt,
+            0.5,
+            {y: "1500%"},
+            {y: "0%", ease: Power2.easeInOut } 
+        )
+      
+  
+    </script>
+
+
+
+</body>
+</html>
